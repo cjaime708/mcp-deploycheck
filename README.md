@@ -1,4 +1,5 @@
 # mcp-deploycheck
+[![MCPize](https://mcpize.com/badge/@cjaime708/mcp-deploycheck)](https://mcpize.com/mcp/mcp-deploycheck)
 
 **The pre-deploy check for coding agents.** One tool call before you push:
 broken-link scanning, llms.txt auditing (AI-readiness), and HTTPS migration
@@ -41,6 +42,16 @@ npm test           # smoke test against the live service (free paths only)
 
 Wire it into an MCP client (e.g. Claude Code) via its stdio config pointing at
 `node /path/to/mcp-deploycheck/src/index.mjs`.
+
+## Connect via MCPize
+
+Use this MCP server instantly with no local installation:
+
+```bash
+npx -y mcpize connect @cjaime708/mcp-deploycheck --client claude
+```
+
+Or connect at: **https://mcpize.com/mcp/mcp-deploycheck**
 
 ## Paid-key slot (marketplace billing)
 
