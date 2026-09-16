@@ -1,20 +1,16 @@
-# mcpize.yaml - MCPize deployment manifest for deploycheck
-# Schema source: https://github.com/mcpize/cli/blob/HEAD/docs/mcpize-yaml-reference.md
-# (pricing is NOT in this file - it is configured in the MCPize Dashboard / via `mcpize publish --pricing`)
+# MCPize Configuration
+# Docs: https://mcpize.com/docs/mcpize-yaml
 
 version: 1
-name: deploycheck
-description: |
-  Pre-deploy check for coding agents: broken-link scanning, llms.txt auditing,
-  and HTTPS migration audit in one tool call with a machine-readable PASS/FAIL
-  verdict. Free demo call included; no account needed.
+
+name: "DeployCheck"
+slug: "mcp-deploycheck"
 
 runtime: typescript
-entry: src/index.mjs
 
 build:
-  install: npm ci
+  install: "npm ci"
 
-startCommand:
+start:
   type: stdio
-  command: node src/index.mjs
+  command: "node src/index.mjs"
